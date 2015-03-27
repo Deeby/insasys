@@ -23,10 +23,9 @@
 </script>
 </head>
 <body>
-<form name='testform'>
-</form>
 
-	<form action="./gesipan_Write.jnb" method="post">
+
+	<form action="./deptgesi.insa" method="get">
 		<table border="1" align="center" width="100%">
 			<tr height="10px" align="center">
 				<td>번호</td>
@@ -36,12 +35,12 @@
 			</tr>		
 			
 			<!-- glist의 길이 많큼 for문 실행 -->
-			<c:forEach items="${glist }" var="glist">
+			<c:forEach items="" var="glist">
 			<tr align="center" height="15px">
-					<td>${glist.num }</td>			<!-- 게시물 번호 -->
-					<td><a href="./gesipan_rview.jnb?num=${glist.num }">${glist.title }</a></td>
-					<td>${glist.name }</td> 			<!-- 게시물  작성자-->
-					<td>${glist.regdate }</td> 			<!--  게시물 작성일자 -->
+					<td></td>			<!-- 게시물 번호 -->
+					<td><a href="a"></a></td>
+					<td></td> 			<!-- 게시물  작성자-->
+					<td></td> 			<!--  게시물 작성일자 -->
 					</tr>
 			</c:forEach>
 		</table>
