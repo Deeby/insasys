@@ -14,6 +14,10 @@ public class ImgBoardDTO {
  
  
  
+public ImgBoardDTO() {
+	super();
+	// TODO Auto-generated constructor stub
+}
 public ImgBoardDTO(int num, String title, String content, String filename,
 		Date regdate, int empid) {
 	super();
