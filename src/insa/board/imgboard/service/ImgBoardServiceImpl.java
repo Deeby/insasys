@@ -12,8 +12,7 @@ public class ImgBoardServiceImpl implements ImgBoardService {
     @Inject
     ImgBoardDao dao;
     
-    @Inject
-    ImgBoardDTO dto;
+
     
 	
 	@Override
