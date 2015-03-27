@@ -1,8 +1,8 @@
-package insa.board.deptgesi.gesipanDTO;
+package insa.board.dept.dto;
 
 import java.util.Date;
 
-public class Gesipan_DTO {
+public class DeptDto {
 	
 	private String emp_no;
 	private int insagesi_num;

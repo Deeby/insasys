@@ -44,5 +44,5 @@ public class ImgBoardServiceImpl implements ImgBoardService {
 		board = dao.view(num);
 		return board;
 	}
-  
+
 }
