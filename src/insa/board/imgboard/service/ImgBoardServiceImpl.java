@@ -12,8 +12,7 @@ public class ImgBoardServiceImpl implements ImgBoardService {
     @Inject
     ImgBoardDao dao;
     
-    @Inject
-    ImgBoardDTO dto;
+
     
 	
 	@Override
@@ -45,5 +44,5 @@ public class ImgBoardServiceImpl implements ImgBoardService {
 		board = dao.view(num);
 		return board;
 	}
-  
+  ¤·¤·¤·
 }

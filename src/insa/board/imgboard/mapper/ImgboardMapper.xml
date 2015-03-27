@@ -5,7 +5,8 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="insa.board.imgboard.mapper.ImgboardMapper">
-<select id="list" resultType="ImgBoardDTO"></select>
+
+<select id="list" resultType="int"></select>
 <insert id="create" parameterType="ImgBoardDTO">
  insert into imgboard (num,title,content,filename,regdate,empid) 
  values(#{num},#{title},#{content},#{filename},sysdate,#{empid})
@@ -13,6 +14,6 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 <update id="update" parameterType="ImgBoardDTO">
 </update>
 <delete id="delete" parameterType="int"></delete>
-<select id="view" parameterType="int"></select>
+<select id="view" parameterType="ImgBoardDTO"></select>
 
 </mapper>

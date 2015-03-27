@@ -9,6 +9,21 @@ public class ImgBoardDTO {
  private String filename;
  Date regdate;
  private int empid;
+ 
+ 
+ 
+ 
+ 
+public ImgBoardDTO(int num, String title, String content, String filename,
+		Date regdate, int empid) {
+	super();
+	this.num = num;
+	this.title = title;
+	this.content = content;
+	this.filename = filename;
+	this.regdate = regdate;
+	this.empid = empid;
+}
 public int getNum() {
 	return num;
 }
