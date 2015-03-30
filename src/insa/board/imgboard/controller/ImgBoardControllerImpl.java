@@ -38,7 +38,7 @@ public class ImgBoardControllerImpl implements ImgBoardController {
     @RequestMapping("/main.insa")
     public ModelAndView main(){
     	ModelAndView model = new ModelAndView();
-    	model.setViewName("main");
+    	model.setViewName("list");
     	return model;
     }
     
@@ -118,7 +118,7 @@ public class ImgBoardControllerImpl implements ImgBoardController {
 	//게시판리스트
 	@RequestMapping(value="/imgBoard/list.insa" , method=RequestMethod.GET)
 	public ModelAndView list(HttpServletRequest request) {
-          
+        System.out.println("list");
 		ModelAndView model = new ModelAndView();
 		List<ImgBoardDTO> list = service.list();
 		model.addObject("list", list);

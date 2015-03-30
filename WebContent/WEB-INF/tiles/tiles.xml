@@ -7,8 +7,8 @@
     <definition name="main" template="/WEB-INF/temp/main.jsp">
     </definition>
     <definition name="mainpage" extends="main">
-<!--         <put-attribute name="title" value="게시판" /> -->
-<!--         <put-attribute name="body" value="/WEB-INF/menu/gesipan.jsp" /> -->
+         <put-attribute name="title" value="게시판" /> 
+        <put-attribute name="body" value="/WEB-INF/temp/main2.jsp" /> 
     </definition>  
 <!--     <definition name="gesipan_Write" extends="main"> -->
 <!--         <put-attribute name="title" value="글쓰기" /> -->
