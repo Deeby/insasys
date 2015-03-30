@@ -29,7 +29,7 @@ public class DeptController implements DeptControllerImpl{
 	@RequestMapping(value="/deptgesi.insa", method = RequestMethod.POST)
 	public ModelAndView list2(HttpServletRequest request) {
 		ModelAndView mav = new ModelAndView();		
-		System.out.println("牧飘费矾 立加....");
+		System.out.println("牧飘费矾 立加!!!....");
 		mav.setViewName("deptmainpage");
 		return mav;
 	}
