@@ -17,6 +17,13 @@ public class ImgBoardControllerImpl implements ImgBoardController {
 	@Inject
 	ImgBoardService service;
 	
+	@RequestMapping(value="/write.insa" , method=RequestMethod.GET)
+	public ModelAndView createPage(HttpServletRequest request){
+		ModelAndView model = new ModelAndView();
+		model.setViewName("viewPage");
+		return model;
+	}
+	
 	@RequestMapping(value="/write.insa" , method=RequestMethod.POST)
 	public ModelAndView create(HttpServletRequest request, ImgBoardDTO dto) {
         
@@ -31,6 +38,7 @@ public class ImgBoardControllerImpl implements ImgBoardController {
         model.setViewName("update");
         return model;
 	}
+    
     @RequestMapping(value="/update.insa", method=RequestMethod.POST)
 	public ModelAndView update(HttpServletRequest request, ImgBoardDTO dto) {
 		service.update(dto);
@@ -42,6 +50,7 @@ public class ImgBoardControllerImpl implements ImgBoardController {
         service.delete(num);
 		return null; //redirect
 	}
+	
 
 	@Override
 	public ModelAndView list(HttpServletRequest request) {
