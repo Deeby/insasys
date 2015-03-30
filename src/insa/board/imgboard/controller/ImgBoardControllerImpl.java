@@ -31,16 +31,11 @@ public class ImgBoardControllerImpl implements ImgBoardController {
 	@RequestMapping(value="/imgBoard/write.insa" , method=RequestMethod.GET)
 	public ModelAndView createPage(HttpServletRequest request){
 		ModelAndView model = new ModelAndView();
-		model.setViewName("viewPage");
+		model.setViewName("imgboardviewPage");
 		return model;
 	}
 	
-    @RequestMapping("/main.insa")
-    public ModelAndView main(){
-    	ModelAndView model = new ModelAndView();
-    	model.setViewName("list");
-    	return model;
-    }
+
     
 	@RequestMapping(value="/imgBoard/write.insa" , method=RequestMethod.POST)
 	public String create(@ModelAttribute("ImgBoardDTO")ImgBoardDTO dto ,MultipartHttpServletRequest request) {
@@ -93,7 +88,7 @@ public class ImgBoardControllerImpl implements ImgBoardController {
     @RequestMapping(value="/imgBoard/update.insa", method=RequestMethod.GET)
 	public ModelAndView updatePage(HttpServletRequest request, ImgBoardDTO dto) {
         ModelAndView model = new ModelAndView();
-        model.setViewName("update");
+        model.setViewName("imgboardupdate");
         return model;
 	}
     //수정
@@ -109,7 +104,7 @@ public class ImgBoardControllerImpl implements ImgBoardController {
 		int num = Integer.parseInt(request.getParameter("num"));
         service.delete(num);
         ModelAndView model = new ModelAndView();
-        model.setViewName("deleteResult");
+        model.setViewName("imgboarddeleteResult");
 		return model;
 	}
 	
@@ -118,11 +113,12 @@ public class ImgBoardControllerImpl implements ImgBoardController {
 	//게시판리스트
 	@RequestMapping(value="/imgBoard/list.insa" , method=RequestMethod.GET)
 	public ModelAndView list(HttpServletRequest request) {
-        System.out.println("list");
+        System.out.println("list도착");
+        
 		ModelAndView model = new ModelAndView();
 		List<ImgBoardDTO> list = service.list();
 		model.addObject("list", list);
-		model.setViewName("list");
+		model.setViewName("imgboardlist");
 		return model;
 	}
 
@@ -134,7 +130,7 @@ public class ImgBoardControllerImpl implements ImgBoardController {
         dto = service.view(num);
         ModelAndView model = new ModelAndView();
         model.addObject("dto", dto);
-        model.setViewName("read");
+        model.setViewName("imgboardread");
         return null;
 	}
 
