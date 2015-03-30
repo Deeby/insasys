@@ -4,7 +4,7 @@
        "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
 
 <tiles-definitions>    
-    <definition name="main2" template="/WEB-INF/temp/main2.jsp">
+    <definition name="main" template="/WEB-INF/temp/main.jsp">
     </definition>
         <definition name="write" extends="main2">
          <put-attribute name="title" value="글쓰기" /> 
@@ -13,7 +13,7 @@
     <definition name="list" extends="main2">
          <put-attribute name="title" value="리스트" /> 
          <put-attribute name="body" value="/WEB-INF/ImgBoard/list.jsp" /> 
-    </definition>
+    </definition> 
     <definition name="deleteResult" extends="main2">
          <put-attribute name="title" value="삭제완료" /> 
          <put-attribute name="body" value="/WEB-INF/ImgBoard/deleteResult.jsp" /> 
