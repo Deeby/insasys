@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
 import org.springframework.web.servlet.ModelAndView;
-
+@RequestMapping("/imgBoard/*")
 public class ImgBoardControllerImpl implements ImgBoardController {
 	
 	private String uploadPath = "C:\\Users\\Administrator\\git\\insa\\insa\\WebContent\\WEB-INF\\files\\";
@@ -95,7 +95,7 @@ public class ImgBoardControllerImpl implements ImgBoardController {
 		return "redirect:/list.insa"; 
 	}
     //삭제
-    @RequestMapping(value="delete" , method=RequestMethod.POST)
+    @RequestMapping(value="/delete.insa" , method=RequestMethod.POST)
 	public ModelAndView delete(HttpServletRequest request) {
 		int num = Integer.parseInt(request.getParameter("num"));
         service.delete(num);
@@ -107,7 +107,7 @@ public class ImgBoardControllerImpl implements ImgBoardController {
 
 	@Override
 	//게시판리스트
-	@RequestMapping(value="list.insa" , method=RequestMethod.POST)
+	@RequestMapping(value="/list.insa" , method=RequestMethod.POST)
 	public ModelAndView list(HttpServletRequest request) {
           
 		ModelAndView model = new ModelAndView();
