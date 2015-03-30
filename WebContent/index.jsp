@@ -8,7 +8,7 @@
 </head>
 <body>
 <script type="text/javascript">
-location.href="<%=request.getContextPath() %>/deptgesi.insa";
+location.href="<%=request.getContextPath()%>/deptgesi.insa";
 </script>
 </body>
 </html>
