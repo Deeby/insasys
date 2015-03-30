@@ -13,27 +13,36 @@ import javax.imageio.ImageIO;
 import javax.inject.Inject;
 import javax.servlet.http.HttpServletRequest;
 
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
 import org.springframework.web.servlet.ModelAndView;
-@RequestMapping("/imgBoard/*")
+
+@Controller
 public class ImgBoardControllerImpl implements ImgBoardController {
 	
 	private String uploadPath = "C:\\Users\\Administrator\\git\\insa\\insa\\WebContent\\WEB-INF\\files\\";
 	@Inject
 	ImgBoardService service;
 	
-	@RequestMapping(value="/write.insa" , method=RequestMethod.GET)
+	@RequestMapping(value="/imgBoard/write.insa" , method=RequestMethod.GET)
 	public ModelAndView createPage(HttpServletRequest request){
 		ModelAndView model = new ModelAndView();
 		model.setViewName("viewPage");
 		return model;
 	}
 	
-	@RequestMapping(value="/write.insa" , method=RequestMethod.POST)
+    @RequestMapping("/main.insa")
+    public ModelAndView main(){
+    	ModelAndView model = new ModelAndView();
+    	model.setViewName("main");
+    	return model;
+    }
+    
+	@RequestMapping(value="/imgBoard/write.insa" , method=RequestMethod.POST)
 	public String create(@ModelAttribute("ImgBoardDTO")ImgBoardDTO dto ,MultipartHttpServletRequest request) {
         
 		// get upload file
@@ -81,21 +90,21 @@ public class ImgBoardControllerImpl implements ImgBoardController {
          		
 	}
 	//수정페이지 이동
-    @RequestMapping(value="/update.insa", method=RequestMethod.GET)
+    @RequestMapping(value="/imgBoard/update.insa", method=RequestMethod.GET)
 	public ModelAndView updatePage(HttpServletRequest request, ImgBoardDTO dto) {
         ModelAndView model = new ModelAndView();
         model.setViewName("update");
         return model;
 	}
     //수정
-    @RequestMapping(value="/update.insa", method=RequestMethod.POST)
+    @RequestMapping(value="/imgBoard/update.insa", method=RequestMethod.POST)
 	public String update(HttpServletRequest request, ImgBoardDTO dto) {
 		service.update(dto);
 	    
 		return "redirect:/list.insa"; 
 	}
     //삭제
-    @RequestMapping(value="/delete.insa" , method=RequestMethod.POST)
+    @RequestMapping(value="/imgBoard/delete.insa" , method=RequestMethod.POST)
 	public ModelAndView delete(HttpServletRequest request) {
 		int num = Integer.parseInt(request.getParameter("num"));
         service.delete(num);
@@ -107,7 +116,7 @@ public class ImgBoardControllerImpl implements ImgBoardController {
 
 	@Override
 	//게시판리스트
-	@RequestMapping(value="/list.insa" , method=RequestMethod.POST)
+	@RequestMapping(value="/imgBoard/list.insa" , method=RequestMethod.GET)
 	public ModelAndView list(HttpServletRequest request) {
           
 		ModelAndView model = new ModelAndView();
@@ -119,7 +128,7 @@ public class ImgBoardControllerImpl implements ImgBoardController {
 
 	@Override
 	//상세내용페이지
-	@RequestMapping(value="/read.insa" , method=RequestMethod.POST)
+	@RequestMapping(value="/imgBoard/read.insa" , method=RequestMethod.POST)
 	public ModelAndView read(HttpServletRequest request, ImgBoardDTO dto) {
         int num = Integer.parseInt(request.getParameter("num"));
         dto = service.view(num);

@@ -25,7 +25,7 @@
 <body>
 <div class="wrapper">	
 	<h3>새 글 쓰기</h3>
-	<form action="write.do" method="post" onsubmit="return writeFormCheck()" enctype="multipart/form-data">	
+	<form action="/write.insa" method="post" onsubmit="return writeFormCheck()" enctype="multipart/form-data">	
 	<table class="boardWrite">	
 		<tr>
 			<th><label for="title">제목</label></th>
