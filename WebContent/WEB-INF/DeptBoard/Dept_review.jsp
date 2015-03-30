@@ -7,6 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
 <title>Insert title here</title>
 </head>
+<link rel="stylesheet" type="text/css" href="<c:url value="/css/woogesi.css"/>"/>
 <body>
 	<form action="./gesipan_update.jnb" method="post" name="gasi">
 		<table>

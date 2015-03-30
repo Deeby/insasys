@@ -10,7 +10,9 @@
 		location.href="./index.jnb";
 	}
 </script>
+<link rel="stylesheet" type="text/css" href="<c:url value="/css/woogesi.css"/>"/>
 </head>
+
 <body>	
 	<form action="./gesipan_save.jnb" method="post">
 		<table border="1" align="center" width="100%">

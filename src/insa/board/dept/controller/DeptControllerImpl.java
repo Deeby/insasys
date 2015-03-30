@@ -1,7 +1,5 @@
 package insa.board.dept.controller;
 
-import java.util.List;
-
 import javax.servlet.http.HttpServletRequest;
 import insa.board.dept.dto.DeptBoardDto;
 import org.springframework.web.servlet.ModelAndView;

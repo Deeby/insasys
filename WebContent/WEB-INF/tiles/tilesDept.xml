@@ -3,12 +3,12 @@
        "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN"
        "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
 
-<tiles-definitions>    
+<tiles-definitions>    	
     <definition name="main" template="/WEB-INF/DeptBoard/Dept_main.jsp">
     </definition>
     <definition name="deptmainpage" extends="main">
         <put-attribute name="title" value="글쓰기" />
-        <put-attribute name="body" value="/WEB-INF/DeptBoard/Dept_Write.jsp" /> 
+        <put-attribute name="body" value="/WEB-INF/DeptBoard/Dept_gesipan.jsp" /> 
     </definition>  
     <definition name="dept_insert" extends="main">
         <put-attribute name="title" value="글쓰기" />

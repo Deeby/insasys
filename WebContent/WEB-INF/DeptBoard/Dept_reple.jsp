@@ -11,6 +11,7 @@
 	}
 </script>
 </head>
+<link rel="stylesheet" type="text/css" href="<c:url value="/css/woogesi.css"/>"/>
 <body>	
 	<form action="./reple_save" method="post">
 		<input type ="hidden" name = "b_ref" value = "${dto.b_ref }">
