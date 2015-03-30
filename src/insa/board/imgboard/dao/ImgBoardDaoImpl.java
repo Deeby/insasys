@@ -41,6 +41,7 @@ public class ImgBoardDaoImpl implements ImgBoardDao {
 	@Override
 	public ImgBoardDTO view(int num) {
 		ImgBoardDTO board = new ImgBoardDTO();
+		System.out.println("dao - num :"+num);
 		board = mapper.view(num);
 		return board;
 	}

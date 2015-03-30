@@ -87,20 +87,28 @@ public class ImgBoardControllerImpl implements ImgBoardController {
 	//수정페이지 이동
     @RequestMapping(value="/imgBoard/update.insa", method=RequestMethod.GET)
 	public ModelAndView updatePage(HttpServletRequest request, ImgBoardDTO dto) {
+    	System.out.println("update도착");
+    	int num = Integer.parseInt(request.getParameter("num"));
+    	System.out.println("수정할 글번호 :"+num);
+    	dto = service.view(num);
         ModelAndView model = new ModelAndView();
+        model.addObject("dto", dto);
         model.setViewName("imgboardupdate");
         return model;
 	}
     //수정
     @RequestMapping(value="/imgBoard/update.insa", method=RequestMethod.POST)
-	public String update(HttpServletRequest request, ImgBoardDTO dto) {
+	public String update(@ModelAttribute("ImgBoardDTO") ImgBoardDTO dto,HttpServletRequest request ) {
+    	System.out.println("update도착");
+    	
 		service.update(dto);
 	    
-		return "redirect:/list.insa"; 
+		return "redirect:./list.insa"; 
 	}
     //삭제
-    @RequestMapping(value="/imgBoard/delete.insa" , method=RequestMethod.POST)
+    @RequestMapping(value="/imgBoard/delete.insa" , method=RequestMethod.GET)
 	public ModelAndView delete(HttpServletRequest request) {
+    	System.out.println("delete도착");
 		int num = Integer.parseInt(request.getParameter("num"));
         service.delete(num);
         ModelAndView model = new ModelAndView();
@@ -124,14 +132,16 @@ public class ImgBoardControllerImpl implements ImgBoardController {
 
 	@Override
 	//상세내용페이지
-	@RequestMapping(value="/imgBoard/read.insa" , method=RequestMethod.POST)
+	@RequestMapping(value="/imgBoard/read.insa" , method=RequestMethod.GET)
 	public ModelAndView read(HttpServletRequest request, ImgBoardDTO dto) {
+		System.out.println("read도착");
         int num = Integer.parseInt(request.getParameter("num"));
+        System.out.println("num ="+num);
         dto = service.view(num);
         ModelAndView model = new ModelAndView();
         model.addObject("dto", dto);
         model.setViewName("imgboardread");
-        return null;
+        return model;
 	}
 
 	

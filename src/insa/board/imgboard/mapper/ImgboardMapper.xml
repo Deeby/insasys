@@ -6,16 +6,32 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 
 <mapper namespace="insa.board.imgboard.mapper.ImgboardMapper">
 
-<select id="list" resultType="int">
-select * from imgboard
+<select id ="selectName" resultType="String" parameterType="int">
+  select e.name
+  from emp e, imgboard i 
+  e.id = i.empid
+</select> 
+<select id="list" resultType="ImgBoardDTO">
+select seq_imgboard_num.nextval,title,content,regdate,empid from imgboard
 </select>
 <insert id="create" parameterType="ImgBoardDTO">
  insert into imgboard (num,title,content,filename,regdate,empid) 
  values(#{num},#{title},#{content},#{filename},sysdate,#{empid})
 </insert>
 <update id="update" parameterType="ImgBoardDTO">
+  update imgboard
+  set title = #{title},
+      content = #{content}
+  where num = #{num}
 </update>
-<delete id="delete" parameterType="int"></delete>
-<select id="view" parameterType="ImgBoardDTO"></select>
+<delete id="delete" parameterType="int">
+delete from imgboard
+where num = #{num}
+</delete>
+<select id="view" parameterType="int" resultType="ImgBoardDTO">
+ select num,title,content,regdate,empid
+ from imgboard
+ where num = #{num}
+</select>
 
 </mapper>

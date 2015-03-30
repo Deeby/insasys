@@ -12,7 +12,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 public interface ImgBoardController {
    String create(@ModelAttribute("ImgBoardDTO")ImgBoardDTO dto ,MultipartHttpServletRequest request);
-   String update(HttpServletRequest request, ImgBoardDTO dto);
+   String update(@ModelAttribute("ImgBoardDTO") ImgBoardDTO dto,HttpServletRequest request);
    ModelAndView delete(HttpServletRequest request);
    ModelAndView list(HttpServletRequest request);
    ModelAndView read(HttpServletRequest request,ImgBoardDTO dto);

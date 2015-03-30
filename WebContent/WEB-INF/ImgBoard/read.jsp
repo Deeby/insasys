@@ -5,8 +5,22 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
 <title>Insert title here</title>
+<script type="text/javascript">
+  function modify(){
+  location.href="./update.insa?num=${dto.num}"
+  }
+  function Delete() {
+   location.href="./delete.insa?num=${dto.num}"
+  }
+</script>
 </head>
 <body>
-
+<table>
+  <tr>
+  <td>제목</td><td>${dto.title }</td>
+  </tr>
+</table>
+ <button onclick="modify()">수정</button>
+ <button onclick="Delete()">삭제</button>
 </body>
 </html>

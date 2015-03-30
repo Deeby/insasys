@@ -40,6 +40,7 @@ public class ImgBoardServiceImpl implements ImgBoardService {
 
 	@Override
 	public ImgBoardDTO view(int num) {
+		System.out.println("service - num :"+num);
 		ImgBoardDTO board = new ImgBoardDTO();
 		board = dao.view(num);
 		return board;
