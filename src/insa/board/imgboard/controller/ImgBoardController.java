@@ -6,14 +6,16 @@ import javax.servlet.http.HttpServletRequest;
 
 import insa.board.imgboard.dto.ImgBoardDTO;
 
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.multipart.MultipartHttpServletRequest;
 import org.springframework.web.servlet.ModelAndView;
 
 public interface ImgBoardController {
-   ModelAndView create(HttpServletRequest request, ImgBoardDTO dto);
-   ModelAndView update(HttpServletRequest request, ImgBoardDTO dto);
+   String create(@ModelAttribute("ImgBoardDTO")ImgBoardDTO dto ,MultipartHttpServletRequest request);
+   String update(HttpServletRequest request, ImgBoardDTO dto);
    ModelAndView delete(HttpServletRequest request);
    ModelAndView list(HttpServletRequest request);
-   ModelAndView view(HttpServletRequest request,ImgBoardDTO dto);
+   ModelAndView read(HttpServletRequest request,ImgBoardDTO dto);
    
      
 }
