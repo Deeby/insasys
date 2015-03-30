@@ -16,12 +16,12 @@ public class NoticeController {
     @Inject
     NoticeService service;
 	
-	@RequestMapping(value="/index.insa", method = RequestMethod.GET)
+	@RequestMapping(value="/noticeList.insa", method = RequestMethod.GET)
 	public ModelAndView goIndex(){
 		ModelAndView model = new ModelAndView();
 		String sys  = service.sysdate();
 		model.addObject("sys", sys);
-		model.setViewName("mainpage");
+		model.setViewName("noticeList");
 		return model;
 	} 
 }

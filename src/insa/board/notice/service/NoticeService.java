@@ -1,19 +1,13 @@
 package insa.board.notice.service;
 
-import insa.board.notice.mapper.NoticeMapper;
+import insa.board.notice.dto.NoticeDto;
 
-import javax.inject.Inject;
+import java.util.List;
 
-import org.springframework.stereotype.Service;
+public interface NoticeService {
 
-@Service("NoticeService")
-public class NoticeService {
 	
-	@Inject
-	NoticeMapper mapper;
-	
-	 public String sysdate(){
-		 String date = mapper.getTime();
-		 return date;
-	 }
+	 List<NoticeDto>list();
+
+	 String sysdate();
 }
