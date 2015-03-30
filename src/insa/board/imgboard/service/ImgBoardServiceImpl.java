@@ -12,8 +12,6 @@ public class ImgBoardServiceImpl implements ImgBoardService {
     @Inject
     ImgBoardDao dao;
     
-
-    
 	
 	@Override
 	public void create(ImgBoardDTO dto) {

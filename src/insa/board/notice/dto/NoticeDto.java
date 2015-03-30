@@ -8,10 +8,22 @@ public class NoticeDto {   //공지사항 dto
 	private String title;           //글 제목
 	private String content;     //글 내용
 	private String fileName;    //파일이름
-	private Date date;          //작성날짜
+	private Date regdate;          //작성날짜
 	private String id;            //글작성자 
 	
 	
+	
+	
+	public NoticeDto(int num, String title, String content, String fileName,
+			Date date, String id) {
+		super();
+		this.num = num;
+		this.title = title;
+		this.content = content;
+		this.fileName = fileName;
+		this.regdate = date;
+		this.id = id;
+	}
 	public int getNum() {
 		return num;
 	}
@@ -37,10 +49,10 @@ public class NoticeDto {   //공지사항 dto
 		this.fileName = fileName;
 	}
 	public Date getDate() {
-		return date;
+		return regdate;
 	}
 	public void setDate(Date date) {
-		this.date = date;
+		this.regdate = date;
 	}
 	public String getId() {
 		return id;
