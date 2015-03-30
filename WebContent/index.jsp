@@ -17,7 +17,7 @@ td{color:gold;}
 	<table border="10px" width="500px" height="80px"
 		align="center">
 		<tr>
-			<td align="center"><a href="#"><font color="#FAECC5">공지사항</font></a></td>
+			<td align="center"><a href="/index.insa"><font color="#FAECC5">공지사항</font></a></td>
 			<td align="center"><a href="#"><font color="#FAECC5">자유게시판</font></a></td>
 			<td align="center"><a href="#"><font color="#FAECC5">부서별게시판</font></a></td>
 			<td align="center"><a href="#"><font color="#FAECC5">우리부서모습</font></a></td>
