@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="insa.board.dept.mapper.DeptBoardMapper">
+
+
+<!-- 게시판 목록 -->
+<select id="deptlist" resultType="int"></select>
+
+<!-- 게시판 글쓰기 -->
+<insert id="deptInsert" parameterType="DeptBoardDto">
+ insert into imgboard (num,title,content,filename,regdate,empid) 
+ values(#{num},#{title},#{content},#{filename},sysdate,#{empid})
+</insert>
+
+<!-- 글 수정 -->
+<update id="deptUpdate" parameterType="DeptBoardDto">
+</update>
+
+<!-- 글 삭제 -->
+<delete id="deptDelete" parameterType="int"></delete>
+
+<!-- 글 상세보기 -->
+<select id="deptView" parameterType="DeptBoardDto"></select>
+</mapper>
+
