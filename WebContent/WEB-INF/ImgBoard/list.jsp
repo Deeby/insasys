@@ -4,17 +4,13 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
-<title>Insert title here</title>
+<title>리스트페이지</title>
 </head>
+리스트페이지
 <body>
    <table>
      <tr><td></td></tr>   
    </table>
-num number(10),
-title varchar2(100),
-content varchar2(700),
-filename varchar2(100),
-regdate date,
-empid number(30));
+      
 </body>
 </html>
