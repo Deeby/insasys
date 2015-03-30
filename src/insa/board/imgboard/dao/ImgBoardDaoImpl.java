@@ -7,6 +7,8 @@ import java.util.List;
 
 import javax.inject.Inject;
 
+import org.springframework.stereotype.Component;
+@Component
 public class ImgBoardDaoImpl implements ImgBoardDao {
  @Inject
  ImgboardMapper mapper;
