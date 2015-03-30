@@ -26,7 +26,7 @@
 <link rel="stylesheet" type="text/css" href="<c:url value="/css/woogesi.css"/>"/>
 </head>
 <body>
-	<form action="/dept_insert.insa" method="get">
+	<form action="/insa/dept_insert.insa" method="get">
 		<table border="1" align="center" width="100%">
 			<tr height="10px" align="center">
 				<td>¹øÈ£</td>
