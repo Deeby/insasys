@@ -18,9 +18,9 @@ td{color:gold;}
 		align="center">
 		<tr>
 			<td align="center"><a href="./noticeList.insa"><font color="#FAECC5">공지사항</font></a></td>
-			<td align="center"><a href="#"><font color="#FAECC5">자유게시판</font></a></td>
-			<td align="center"><a href="#"><font color="#FAECC5">부서별게시판</font></a></td>
-			<td align="center"><a href="/main.insa"><font color="#FAECC5">우리부서모습</font></a></td>></tr>
+			<td align="center"><a href="*"><font color="#FAECC5">자유게시판</font></a></td>
+			<td align="center"><a href="./deptgesi.insa"><font color="#FAECC5">부서별게시판</font></a></td>
+			<td align="center"><a href="./imgBoard/list.insa"><font color="#FAECC5">우리부서모습</font></a></td></tr>
 			</table>
 </body>
 </html>
