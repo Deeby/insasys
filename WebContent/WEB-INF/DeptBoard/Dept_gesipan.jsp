@@ -6,7 +6,9 @@
 <head>
 
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
-<title>Insert title here</title><script type="text/javascript">
+<title>Insert title here</title>
+<script type="text/javascript">
+
 	function cancle() {
 		location.href="./login.jnb";
 	}
@@ -21,11 +23,10 @@
 		testF.submit();
 	}
 </script>
+<link rel="stylesheet" type="text/css" href="<c:url value="/css/woogesi.css"/>"/>
 </head>
 <body>
-
-
-	<form action="./deptgesi.insa" method="get">
+	<form action="/insa/dept_insert.insa" method="get">
 		<table border="1" align="center" width="100%">
 			<tr height="10px" align="center">
 				<td>번호</td>
@@ -44,13 +45,18 @@
 					</tr>
 			</c:forEach>
 		</table>
-		<table align="right">		
+		<table align="center">
+		<tr>
+		<td><input type="submit" value="글쓰기" /></td>
+		</tr>
+		</table>
+	<!-- 	<table align="right">		
 			<tr>
 			<td><input type="button" value="로그인" onclick="test1()" ></td>
 			<td><input type="button" value="회원가입" onclick="cancle2()"></td>	
 			<td><input type="submit" value="글 쓰기" ></td>					
 			</tr>
-		</table> 
+		</table>  -->
 		</form>
 		 
 		</body>

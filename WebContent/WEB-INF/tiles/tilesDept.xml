@@ -4,16 +4,16 @@
        "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
 
 <tiles-definitions>    
-    <definition name="main" template="/WEB-INF/DeptBoard/gesipan.jsp">
+    <definition name="main" template="/WEB-INF/DeptBoard/Dept_main.jsp">
     </definition>
     <definition name="deptmainpage" extends="main">
-<!--         <put-attribute name="title" value="게시판" /> -->
-<!--         <put-attribute name="body" value="/WEB-INF/menu/gesipan.jsp" /> -->
+        <put-attribute name="title" value="글쓰기" />
+        <put-attribute name="body" value="/WEB-INF/DeptBoard/Dept_Write.jsp" /> 
     </definition>  
-<!--     <definition name="gesipan_Write" extends="main"> -->
-<!--         <put-attribute name="title" value="글쓰기" /> -->
-<!--         <put-attribute name="body" value="/WEB-INF/menu/gesipan_Write.jsp" /> -->
-<!--     </definition> -->
+    <definition name="dept_insert" extends="main">
+        <put-attribute name="title" value="글쓰기" />
+        <put-attribute name="body" value="/WEB-INF/DeptBoard/Dept_Write.jsp" />
+    </definition>
 <!--     <definition name="gesipan_review" extends="main"> -->
 <!--         <put-attribute name="title" value="글쓰기" /> -->
 <!--         <put-attribute name="body" value="/WEB-INF/menu/gesipan_review.jsp" /> -->

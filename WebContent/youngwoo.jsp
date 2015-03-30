@@ -4,13 +4,9 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
-<title>리스트페이지</title>
+<title>Insert title here</title>
 </head>
-리스트페이지
 <body>
-   <table>
-     <tr><td></td></tr>   
-   </table>
-      
+
 </body>
 </html>

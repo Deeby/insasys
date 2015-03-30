@@ -6,23 +6,23 @@
 <tiles-definitions>    
     <definition name="main2" template="/WEB-INF/temp/main2.jsp">
     </definition>
-        <definition name="write" extends="main2">
+        <definition name="imgboardwrite" extends="main2">
          <put-attribute name="title" value="글쓰기" /> 
          <put-attribute name="body" value="/WEB-INF/ImgBoard/write.jsp" /> 
     </definition>
-    <definition name="list" extends="main2">
+    <definition name="imgboardlist" extends="main2">
          <put-attribute name="title" value="리스트" /> 
          <put-attribute name="body" value="/WEB-INF/ImgBoard/list.jsp" /> 
-    </definition>
-    <definition name="deleteResult" extends="main2">
+    </definition> 
+    <definition name="imgboarddeleteResult" extends="main2">
          <put-attribute name="title" value="삭제완료" /> 
          <put-attribute name="body" value="/WEB-INF/ImgBoard/deleteResult.jsp" /> 
     </definition>
-        <definition name="update" extends="main2">
+        <definition name="imgboardupdate" extends="main2">
          <put-attribute name="title" value="수정" /> 
          <put-attribute name="body" value="/WEB-INF/ImgBoard/update.jsp" /> 
     </definition>
-    <definition name="read" extends="main2">
+    <definition name="imgboardread" extends="main2">
          <put-attribute name="title" value="읽기" /> 
          <put-attribute name="body" value="/WEB-INF/ImgBoard/read.jsp" /> 
     </definition>     

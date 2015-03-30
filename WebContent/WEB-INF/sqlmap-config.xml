@@ -4,7 +4,7 @@
 <configuration>
 <typeAliases>
 <typeAlias type="insa.board.imgboard.dto.ImgBoardDTO" alias="ImgBoardDTO"/>
-<typeAlias type="insa.board.dept.dto.DeptDto" alias="DeptDto"/>
+<typeAlias type="insa.board.dept.dto.DeptBoardDto" alias="DeptBoardDto"/>
 <typeAlias type="insa.board.notice.dto.NoticeDto" alias="NoticeDto"/>
 </typeAliases>
 </configuration>
