@@ -10,4 +10,12 @@ public interface NoticeService {
 	 List<NoticeDto>list();
 
 	 String sysdate();
+
+	NoticeDto read(int num);
+
+	void write(NoticeDto dto);
+
+	void modify(NoticeDto dto);
+
+	void delete(int num);
 }

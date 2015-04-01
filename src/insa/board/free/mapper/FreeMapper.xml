@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="insa.board.free.mapper.FreeMapper">
+
+<insert id="write" parameterType="insa.board.free.dto.FreeDto">
+
+insert into free(num,title,content,filename,regdate,thumb) 
+values (seq_free.nextval, #{title},#{content},#{fileName},sysdate,#{thumb})
+
+</insert>
+
+</mapper>

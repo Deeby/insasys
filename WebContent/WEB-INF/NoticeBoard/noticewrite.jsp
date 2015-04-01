@@ -8,5 +8,20 @@
 </head>
 <body>
 <h2> notice write </h2>
+
+<form action="./noticeWrite.insa" method="post">
+	제목 : <input type="text" name="title"><br/>
+	내용 : <input type="text" name="content">
+	
+	<input type="submit" value="등록">
+	<input type="button" value="취소" onclick="cancle()">
+
+</form>
+<script type="text/javascript">
+	function cancle() {
+		location.href="./noticeList.insa";
+	}
+</script>
+
 </body>
 </html>

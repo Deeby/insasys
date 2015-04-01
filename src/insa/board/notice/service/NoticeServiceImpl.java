@@ -18,7 +18,7 @@ public class NoticeServiceImpl implements NoticeService {
 	@Override
 	public List<NoticeDto>list(){
 		 
-		return null;
+		return dao.list();
 	 }
 	
 	
@@ -27,5 +27,29 @@ public class NoticeServiceImpl implements NoticeService {
 		
 		return dao.sysdate();
 		
+	}
+
+
+	@Override
+	public NoticeDto read(int num) {
+		return dao.read(num);
+	}
+
+
+	@Override
+	public void write(NoticeDto dto) {
+		dao.write(dto);
+	}
+
+
+	@Override
+	public void modify(NoticeDto dto) {
+		dao.modify(dto);
+	}
+
+
+	@Override
+	public void delete(int num) {
+		dao.delete(num);
 	}
 }

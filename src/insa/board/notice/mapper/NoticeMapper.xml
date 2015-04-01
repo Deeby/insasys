@@ -4,10 +4,16 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="insa.board.notice.mapper.NoticeMapper">
 
-<!-- <select id="list" resultType="NoticeDto"> -->
-<!--  select * from notice -->
-<!-- </select> -->
+ <select id="list" resultType="insa.board.notice.dto.NoticeDto"> 
+select num,title,regdate,empid from notice order by num desc
+ </select>  
 
+<insert id="write" parameterType="NoticeDto">
+
+insert into notice(num,title,content,regdate) 
+values (seq_notice.nextval, #{title},#{content},sysdate)
+
+</insert>
 
 <!-- 	<select id="list" parameterType="int" resultType="insa.board.notice.dto.NoticeDto"> -->
 
